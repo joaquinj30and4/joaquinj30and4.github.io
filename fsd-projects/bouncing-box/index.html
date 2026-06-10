@@ -49,7 +49,7 @@
         });
 
         // Every 50 milliseconds, call the update Function (see below)
-        setInterval(update, 50);
+        setInterval(update, 20);
 
         // Every time the box is clicked, call the handleBoxClick Function (see below)
         box.on("click", handleBoxClick);
@@ -69,6 +69,7 @@
         //////////////////////////////////////////////////////////////////
 
         // TODO 2 - Variable declarations
+        var positionX = 0 
 
 
 
@@ -80,9 +81,9 @@
          * If the box drifts off the screen, turn it around!
          */
         function update() {
-
-        
-
+          moveBoxTo(positionX); 
+          positionX += 1;
+          
           
         }
 
@@ -94,7 +95,10 @@
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
+          positionX = 0
+         
 
+         
 
 
 
